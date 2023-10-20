@@ -1,0 +1,51 @@
+{
+  "name": "el-base-table",
+  "version": "0.0.1",
+  "description": "Public table component based on el-element",
+  "main": "dist/el-base-table.umd.js",
+  "private": false,
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --name el-base-table --entry src/main.js",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "element-ui": "^2.15.14",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "prettier": "^3.0.3",
+    "sass": "^1.69.4",
+    "sass-loader": "^13.3.2",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "peerDependencies": {
+    "element-ui": "^2.15.14",
+    "sass": "^1.69.4",
+    "sass-loader": "^13.3.2",
+    "vue": "^2.6.14"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yrx0823/el-base-table.git"
+  },
+  "author": "yrx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yrx0823/el-base-table/issues"
+  },
+  "homepage": "https://github.com/yrx0823/el-base-table#readme"
+}
