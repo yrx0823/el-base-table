@@ -1,6 +1,8 @@
 # el-base-table
 Public table component based on el-element
-项目是基于vue的element-ui的el-table衍生，属性和事件都继承了el-table。
+
+项目是基于vue2，是element-ui的el-table的进一步封装，支持前端分页和后端分页。
+
 #### 安装
 确保项目已经安装了element-ui
 ```
