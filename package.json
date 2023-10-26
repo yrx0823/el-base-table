@@ -6,11 +6,13 @@
   "private": false,
   "scripts": {
     "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name el-base-table --entry src/main.js",
+    "build": "vue-cli-service build --target lib --name el-base-table --entry src/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "element-ui": "^2.15.14",
+    "lodash": "^4.17.21",
     "vue": "^2.6.14"
   },
   "devDependencies": {
@@ -19,7 +21,6 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
-    "element-ui": "^2.15.14",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
     "prettier": "^3.0.3",
@@ -28,7 +29,6 @@
     "vue-template-compiler": "^2.6.14"
   },
   "peerDependencies": {
-    "element-ui": "^2.15.14",
     "sass": "^1.69.4",
     "sass-loader": "^13.3.2",
     "vue": "^2.6.14"
