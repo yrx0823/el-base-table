@@ -64,6 +64,9 @@ export default {
         return [10, 50, 100]
       }
     },
+    sizes: {
+      type: Number
+    },
     total: {
       type: Number,
       default: 0
@@ -83,24 +86,24 @@ export default {
     return {
       resData: [],
       page: 1,
-      pageSize: this.pageSizes[0]
+      pageSize: this.sizes ? this.sizes : this.pageSizes[0]
     }
   },
   methods: {
     handleSizeChange(val) {
       this.page = 1
       if (this.frontPage) {
-        this.handlerPage()
+        this.handlePage()
       }
-      this.$emit('change', { page: this.page, pageSize: this.pageSize })
+      this.$emit('change', { page: this.page, size: this.pageSize })
     },
     handleCurrentChange(val) {
       if (this.frontPage) {
-        this.handlerPage()
+        this.handlePage()
       }
-      this.$emit('change', { page: this.page, pageSize: this.pageSize })
+      this.$emit('change', { page: this.page, size: this.pageSize })
     },
-    handlerPage() {
+    handlePage() {
       const curPageSize = this.page * this.pageSize
       this.resData = this.tableData.slice(
         (this.page - 1) * this.pageSize,
@@ -112,7 +115,7 @@ export default {
     tableData: {
       handler(val) {
         if (this.frontPage) {
-          this.handlerPage()
+          this.handlePage()
         } else {
           this.resData = this.tableData.slice()
         }

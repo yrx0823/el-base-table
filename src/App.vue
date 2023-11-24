@@ -7,7 +7,7 @@
       :columns="columns"
       :tableData="tableData"
       :frontPage="true"
-      :pageSizes="[5, 10, 15]"
+      :pageSizes="[3, 6, 9]"
       :total="total"
     >
       <template v-slot:operate="{ row, prop }">
@@ -34,7 +34,8 @@ export default {
           slot: 'operate'
         }
       ],
-      tableData: []
+      tableData: [],
+      total: 0
     }
   },
   methods: {
