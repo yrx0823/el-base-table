@@ -18,6 +18,7 @@ npm install el-base-table
 |自有属性|分页相关，如下→
 |pageLayout|同el-page的layout属性一致|string|参考el-page的layout|默认：'total, sizes, prev, pager, next'|-|
 |pageSizes|同el-page的page-sizes属性一致|Array|参考el-page的page-sizes|默认：[10, 50, 100]|-|
+| pageSize | 同el-page的page-size属性一致 | number | --- | 默认pageSizes数组的第一个值 | --- |
 |total|同el-page的total属性一致|number|参考el-page的total|默认：0|-|
 
 #### 自有事件

@@ -26,7 +26,7 @@
       @current-change="handleCurrentChange"
       :current-page.sync="page"
       :page-sizes="pageSizes"
-      :page-size.sync="pageSize"
+      :page-size.sync="sizes"
       :layout="pageLayout"
       :total="total"
       :background="background"
@@ -64,7 +64,7 @@ export default {
         return [10, 50, 100]
       }
     },
-    sizes: {
+    pageSize: {
       type: Number
     },
     total: {
@@ -86,7 +86,7 @@ export default {
     return {
       resData: [],
       page: 1,
-      pageSize: this.sizes ? this.sizes : this.pageSizes[0]
+      sizes: this.pageSize ? this.pageSize : this.pageSizes[0]
     }
   },
   methods: {
@@ -95,18 +95,18 @@ export default {
       if (this.frontPage) {
         this.handlePage()
       }
-      this.$emit('change', { page: this.page, size: this.pageSize })
+      this.$emit('change', { page: this.page, size: this.sizes })
     },
     handleCurrentChange(val) {
       if (this.frontPage) {
         this.handlePage()
       }
-      this.$emit('change', { page: this.page, size: this.pageSize })
+      this.$emit('change', { page: this.page, size: this.sizes })
     },
     handlePage() {
-      const curPageSize = this.page * this.pageSize
+      const curPageSize = this.page * this.sizes
       this.resData = this.tableData.slice(
-        (this.page - 1) * this.pageSize,
+        (this.page - 1) * this.sizes,
         curPageSize > this.total ? this.total : curPageSize
       )
     }
